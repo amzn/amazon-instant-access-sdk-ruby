@@ -3,8 +3,8 @@ Amazon Instant Access - Ruby SDK
 
 **Amazon Instant Access** (AIA) is a digital content fulfillment technology that allows purchases on the Amazon website
 and delivery by third party vendors. This Ruby SDK provides the vendors a simple way to authenticate incoming requests
-from Amazon. Please refer to our [guide](https://s3-us-west-2.amazonaws.com/dtg-docs/index.html) for more information on
-the on-boarding procedure and the integration API.
+from Amazon. Please read our [integration guide](https://s3-us-west-2.amazonaws.com/dtg-docs/index.html) and learn about
+the on-boarding procedure and the integration API before using this SDK.
 
 Installation
 ------------
@@ -12,7 +12,7 @@ Run the following set of commands to install the latest version from
 [GitHub](https://github.com/amzn/amazon-instant-access-sdk-ruby):
 
 ```bash
-~$ git clone git@github.com:amzn/amazon-instant-access-sdk-ruby.git
+~$ git clone https://github.com/amzn/amazon-instant-access-sdk-ruby.git
 ~$ cd amazon-instant-access-sdk-ruby
 ~$ gem build amazon-instant-access.gemspec
 ~$ gem install amazon-instant-access-*.gem
@@ -24,7 +24,9 @@ Note that `sudo` may be required depending on the environment.
 Getting Started
 ---------------
 
-Here is a Ruby on Rails controller a vendor might use to process requests from Amazon:
+This instruction assumes that the vendor has already started implementing the web service for handling HTTP requests from Amazon Instant Access, and is already familiar with the integration API. 
+
+Here is a simple example of Ruby on Rails controller a vendor might start out with:
 
 ```ruby
 class VendorFulfillmentController < ApplicationController
@@ -46,7 +48,7 @@ class VendorFulfillmentController < ApplicationController
 end
 ```
 
-Use the SDK to add authentication to the controller:
+Use the SDK to enable authentication in the controller:
 
 ```ruby
 require 'amazon-instant-access'
@@ -89,8 +91,8 @@ auth.verify_request(
 )
 ```
 
-Note that the example above is specific to Ruby on Rails, and the arguments may have to be modified depending on the
-web framework in use. The credentials should not be hardcoded but obtained from a secure, external source instead.
+Note that the example above is specific to Ruby on Rails, and the method arguments may have to be modified depending on the
+web framework in use by the vendor. The credentials should not be hardcoded but obtained from a secure, external source (e.g. file with correct permissions).
 
 Once set up, the `AmazonInstantAccess::Authentication` instance will automatically compute and verify the request
 signature. It will also log detailed messages to `./amazon_instant_access_auth.log`. The location of the log file and
