@@ -24,7 +24,7 @@ Note that `sudo` may be required depending on the environment.
 Getting Started
 ---------------
 
-This instruction assumes that the vendor has already started implementing the web service for handling HTTP requests from Amazon Instant Access, and is already familiar with the integration API. 
+This instruction assumes that the vendor has already started implementing the web service for handling HTTP requests from Amazon Instant Access, and is already familiar with the integration API. The SDK is for authenticating **accounting-linking** and **fulfillment** requests from Amazon. 
 
 Here is a simple example of Ruby on Rails controller a vendor might start out with:
 
