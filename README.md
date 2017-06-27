@@ -3,8 +3,7 @@ Amazon Instant Access - Ruby SDK
 
 **Amazon Instant Access** (AIA) is a digital content fulfillment technology that allows purchases on the Amazon website
 and delivery by third party vendors. This Ruby SDK provides the vendors a simple way to authenticate incoming requests
-from Amazon. Please read our [integration guide](https://s3-us-west-2.amazonaws.com/dtg-docs/index.html) and learn about
-the on-boarding procedure and the integration API before using this SDK.
+from Amazon. Please refer to our integration guide for [Subscriptions (SaaS)](https://s3-us-west-2.amazonaws.com/aia-docs/integration-guide-subscriptions.pdf) or [One-Time Purchasing](https://s3-us-west-2.amazonaws.com/aia-docs/integration-guide-one-time-purchases.pdf) to learn about the on-boarding procedure and the API specifications before using this SDK.
 
 Installation
 ------------
@@ -24,7 +23,7 @@ Note that `sudo` may be required depending on the environment.
 Getting Started
 ---------------
 
-This instruction assumes that the vendor has already started implementing the web service for handling HTTP requests from Amazon Instant Access, and is already familiar with the integration API. The SDK is for authenticating **accounting-linking** and **fulfillment** requests from Amazon. 
+This instruction assumes that the vendor has already started implementing the web service for handling HTTP requests from Amazon Instant Access, and is already familiar with the integration API. The SDK is for authenticating **account linking** and **fulfillment (service)** requests from Amazon.
 
 Here is a simple example of Ruby on Rails controller a vendor might start out with:
 
