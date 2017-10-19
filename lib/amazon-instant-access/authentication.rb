@@ -9,7 +9,7 @@ module AmazonInstantAccess
 
   # Handles request authentication for Amazon Instant Access integration
   #
-  # @author Amazon.com LLC
+  # @author Amazon.com
   #
   class Authentication
 
