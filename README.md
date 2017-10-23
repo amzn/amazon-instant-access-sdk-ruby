@@ -93,6 +93,9 @@ auth.verify_request(
 Note that the example above is specific to Ruby on Rails, and the method arguments may have to be modified depending on the
 web framework in use by the vendor. The credentials should not be hardcoded but obtained from a secure, external source (e.g. file with correct permissions).
 
+Logging
+-------
+
 Once set up, the `AmazonInstantAccess::Authentication` instance will automatically compute and verify the request
 signature. It will also log detailed messages to `./amazon_instant_access_auth.log`. The location of the log file and
 the logging behavior can be customized by passing in a new logger instance into the initializer:
@@ -133,6 +136,9 @@ class VendorFulfillmentController < ApplicationController
 
 end
 ```
+
+Error Handling
+--------------
 
 If the authentication fails for any reason, the `AmazonInstanceAccess::Authentication` instance will raise exceptions
 specific to the issue. These should be caught and handled appropriately by the vendors. Here is an example showing all
@@ -236,6 +242,9 @@ class VendorFulfillmentController < ApplicationController
 
 end
 ```
+
+Credentials
+-----------
 
 If multiple credentials are required, simply add them into the input credentials on initialization:
 ```ruby
